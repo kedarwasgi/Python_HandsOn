@@ -1,1 +1,10 @@
+Day 1:
 
+1. Learned about what is Python Programming, Why there is a need of an another programming language?
+-> Python is a High Level General Purpose Programming Language. 
+With the Rise of AI, Python became more popular beacuse of its extensive support for scientific libraries like SciPy, Numpy, Pandas etc.
+It is easy to understand and it has huge community of developers.
+
+2. Learned about IDLE/REPL/Need of an IDE's like VS-Code, PyCharm etc.
+
+3. Learned about Variables and Stings/Number operations in Python.
