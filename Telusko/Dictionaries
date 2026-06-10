@@ -1,0 +1,52 @@
+print("This is a day 2 in which we will cover topics such as lists, tuples, sets, and dictionaries.")
+
+'''
+4. Dictionaries: 
+
+Dictionaries are used to store data values in key-value pairs.
+A dictionary is a collection which is ordered*, changeable and do not allow duplicate keys.
+
+'''
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(thisdict["brand"])
+
+print(len(thisdict))
+
+thisdict = dict(name = "John", age = 36, country = "Norway")
+print(thisdict)
+
+car = {
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+
+x = car.keys()
+x = car.values()
+x = car.items()
+
+print(x) #before the change
+
+car["color"] = "white"
+
+print(car) #after the change
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict.update({"year": 2020})
+
+print(thisdict)
+
+for x, y in thisdict.items():
+  print(x, y)
+
+###################################################
+
