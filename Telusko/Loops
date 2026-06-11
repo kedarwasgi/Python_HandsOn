@@ -1,0 +1,32 @@
+
+# Intro while loops
+
+i = 1
+
+while i < 5:
+    print('Kedar', end = ' ')
+    j = 1
+    while j < 3:
+        print('Rocks!', end = ' ')
+        j += 1
+    print("")
+    i +=1
+
+'''
+Output:
+
+Kedar Rocks! Rocks! 
+Kedar Rocks! Rocks! 
+Kedar Rocks! Rocks! 
+Kedar Rocks! Rocks! 
+'''
+---------------------------------------------------------------
+
+# print even numbers usinf for loop
+
+for i in range(1,11):
+    if i%2 == 0:
+        print(i)
+
+
+
