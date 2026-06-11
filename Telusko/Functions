@@ -1,0 +1,11 @@
+#Below is a simple guide on how we can create functions and use them in our code:
+
+def add(a,b):           #defining the function
+    x = a
+    y = b 
+    z = x + y 
+
+    return z            #returns the result
+
+x =  add(5,5)           #calling the function and storing the result in a variable
+print(x)
