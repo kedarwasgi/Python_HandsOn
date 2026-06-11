@@ -1,0 +1,16 @@
+# This is a code that i have practiced to demonstrate if-else along with debugging 
+# Topics studied: IF-ELIF-ELSE, Debugging, Breakpoint etc
+
+num = int(-10)
+print('Hello: ',num)
+
+if num % 2 == 0:
+    print(f'The {num} is even.')
+    if num > 5:
+        print('Great')
+    elif num < 0:
+        print('Negative')
+    else:
+        print('ok')
+else:
+    print(f'The {num} is odd.')
