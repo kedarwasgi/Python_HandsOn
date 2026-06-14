@@ -1,0 +1,60 @@
+Variable Length Argument in Python
+
+Variable-length arguments refer to a feature that allows a function to accept a variable number of arguments in Python. It is also known as the argument that can also accept an unlimited amount of data as input inside the function.
+
+There are two types in Python:
+
+Non - Keyworded Arguments (*args)
+Keyworded Arguments (**kwargs)
+
+————————————————————
+
+What is Python *args?
+
+In Python, *args is used to pass a variable number of arguments to a function. It is used to pass a variable-length, non-keyworded argument list. These arguments are collected into a tuple within the function and allow us to work with them.
+
+Feature of Python *args
+
+To accept a variable number of arguments, use the symbol *; by convention, it is commonly used with the term args.
+
+*args enables you to accept more arguments than the number of formal arguments you previously defined. With *args, you can add any number of extra arguments to your current formal parameters (including none).
+
+Using the *, the variable that we associate with the * becomes iterable meaning you can do things like iterate over it, run some higher-order functions such as map and filter, etc.
+
+Eg.
+
+def sum_all(*args):
+    result = 0
+    for num in args:
+        result += num
+    return result
+
+print(sum_all(1, 2, 3, 4, 5))
+
+Output
+15
+
+————————————————————
+
+What is Python **kwargs?
+
+In Python, **kwargs is used to pass a keyworded, variable-length argument list. We call kwargs with a double star. The reason for this is that the double star allows us to pass over keyword arguments (in any order). Arguments are collected into a dictionary within the function that allow us to access them by their keys.
+
+Feature of Python **kwargs
+
+A keyword argument is when you give the variable a name as you provide it into the function.
+
+Consider the kwargs to be a dictionary that maps each keyword to the value we pass beside it. As a result, when we iterate through the kwargs, there appears to be no sequence in which they were printed.
+
+Eg.
+
+def display_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+display_info(name="Alice", age=30, city="New York")
+
+Output
+name: Alice
+age: 30
+city: New York
