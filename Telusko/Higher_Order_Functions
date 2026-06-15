@@ -1,0 +1,44 @@
+A Higher-Order Function is a function that either:
+
+-Takes another function as an argument
+-Returns a function as a result
+
+eg1.
+
+def apply(func, x): # higher order function
+    return func(x)
+
+def square(n): # function to be passed
+    return n * n
+
+print(apply(square, 5))
+---------------
+Output
+25
+
+Explanation:
+
+apply(func, x) takes another function as an argument.
+square(n) computes the square of n.
+apply(square, 5) executes square(5), resulting in 25.
+---------------------------------------------------------------------
+
+eg2.
+
+def greet(func): # higher-order function 
+    return func("Hello")
+
+def uppercase(text): # function to be passed
+    return text.upper()
+
+print(greet(uppercase))
+------------------
+Output
+HELLO
+
+Explanation: 
+
+greet(func) is a higher-order function as it takes another function as an argument. 
+uppercase(text) converts text to uppercase. 
+
+Calling greet(uppercase) passes "Hello" to uppercase, resulting in "HELLO".
