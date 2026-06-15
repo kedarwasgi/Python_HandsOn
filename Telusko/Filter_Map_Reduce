@@ -1,0 +1,39 @@
+# filter - Used for filtering & wrorks on true/false
+# map - Used for transformations
+# reduce - Used for summarizing
+
+#--------------------------- FILTER -----------------------------#
+
+num_list = [1,2,3,4,5,6,7,8,10]
+print(num_list)
+
+# def is_even(n):
+#     return n%2 == 0
+
+# is_even = lambda n : n%2 ==0
+
+result1 = list(filter(lambda n : n%2 ==0, num_list))
+print(result1)
+
+#--------------------------- MAP -----------------------------#
+
+# def double_it(n):
+#     return n*2
+
+# double_it = lambda n : n*2
+
+
+result2 = list(map(lambda n : n*2, result1))
+print(result2)
+
+#---------------------------- REDUCE ----------------------------#
+
+from functools import reduce
+
+# def add(a,b):
+#     return a+b
+
+# add = lambda a,b: a+b
+
+result3 = reduce(lambda a,b: a+b, result2)
+print(result3)
