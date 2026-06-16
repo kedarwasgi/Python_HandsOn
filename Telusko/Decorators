@@ -1,0 +1,24 @@
+# Decorator is a function which takes another function as an argument and performs some trasformations/modifications/feature_enhancements and returns a function.
+ 
+def decorators(func):
+    def wrapper():
+        print('Transaction Initiated.')
+        func()
+        print('Transaction Completed.')
+    return wrapper
+
+
+# def hello():
+#     print('Transaction is in progress...')
+
+# hello1 = decorators(hello)
+# hello1()
+
+@decorators
+def hello():
+    print('Transaction is in progress...')
+
+hello()
+
+
+
