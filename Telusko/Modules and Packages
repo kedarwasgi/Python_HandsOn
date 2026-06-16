@@ -1,0 +1,41 @@
+In Python, modules and packages are core mechanisms for organizing and reusing code, enabling modular programming for better maintainability, scalability, and reusability.
+-------------------------------------------------------------------------------------------------------
+# A module is simply a .py file containing Python code — functions, classes, or variables. 
+
+For example:
+
+# demo_module.py
+def greet(name):
+   print(f"Hello, {name}!")
+
+You can import and use it as:
+
+import demo_module
+demo_module.greet("Alice")
+
+------------------------------------------------------
+# A package is a directory containing multiple modules.
+
+Creating a Package Example:
+
+math_operations/        #Here math_operations is a package (nothing but a folder, inside that it has multiple .py files called as modules)
+add.py
+sub.py
+multiply.py
+divide.py
+
+-----------------------------------------------------------
+
+Import Techniques:
+
+- import module_name
+- from module_name import function_name
+- import module_name as alias
+- from package import module
+- from package.module import function
+
+eg. 
+
+- from calc_module import *
+- from calc_pckg import calc_module
+- from calc_pckg.calc_module import *
