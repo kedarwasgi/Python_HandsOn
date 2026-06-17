@@ -1,0 +1,27 @@
+'''
+Objects represents real world entities and
+Class is a blueprint/template of an object
+
+A Class can have two types of Methods 
+[1. What it knows (aka data/properties) and 
+ 2.What it can do (aka actions/behaviours)]
+
+'''
+
+class student:
+    def __init__(self):
+        pass
+
+    def putdata(self,my_id,my_name,my_marks): #Method1: What it knows (data/properties)
+        self.id = my_id
+        self.name = my_name
+        self.marks = my_marks
+
+    def avg(self):          #Method2: What it can do (actions/behaviours)
+        return sum(self.marks)/len(self.marks)
+    
+
+s1 = student() #object
+
+s1.putdata(1,'kedar',[10,20,30])
+s1.avg()
