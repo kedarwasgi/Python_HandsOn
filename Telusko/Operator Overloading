@@ -1,0 +1,47 @@
+#OperatorOverloading
+'''
+Operator overloading allows you to redefine the behavior of operators for user-defined classes. 
+This is achieved by implementing special methods (also called magic methods) in your class, such as __add__, __sub__, etc.
+'''
+
+#eg.1 
+
+class student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def __gt__(self, other):                #Overlaoding '>' (greater than symbol) using '__gt__' method
+        return self.marks > other.marks
+
+s1 = student('Kedar', 210)
+s2 = student('Harsh', 201)
+
+print(s1 > s2)
+
+
+#eg.2
+
+class student:
+    def __init__(self, name, roll_number):
+        self.name = name
+        self.roll_number = roll_number
+
+    def __str__(self):
+        details = f'Student name is {self.name} and roll no. is {self.roll_number}'
+        return details
+
+s1 = student('Kedar', 11)
+print(s1)
+
+# print(s1) calls str(s1)
+# str(s1) calls s1.__str__()
+# Your returned string gets printed
+
+'''
+Note: If '__str__' did not exist in your class, 
+Python would fall back to the default object representation (sfor eg. <__main__.student object at 0x...>
+'''
+
+
+
