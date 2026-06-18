@@ -1,1 +1,23 @@
 #Method Overriding
+'''
+Its a process of redefining a method in a child class that already exists in the parent class, 
+allowing the child class to provide its own implementation.
+'''
+
+class Notification:  # Parent class
+    def send(self):
+        print("Sending a notification")
+
+class EmailNotification(Notification):   #Child Class, since we are inherating it from 'Notification' parent class
+    def send(self):  # Overriding the parent method
+        print("Sending an EMAIL notification")
+
+
+# Objects
+email = EmailNotification()
+
+email.send()
+
+----------------------------
+output: 
+Sending an EMAIL notification
