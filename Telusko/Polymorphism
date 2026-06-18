@@ -1,0 +1,36 @@
+'''
+Polymorphism : It is one of the core concepts in object-oriented programming. The word 'Polymorphism' is derived from Greek language which means "Many Forms". 
+It is the ability of an object to take many forms. It allows to perform different actions in different contexts even if the names of the methods are the same.
+'''
+
+class cat:
+    def sound(self):
+        print('Cat Meows!')
+
+class dog:
+    def sound(self):
+        print('Dog barks!')
+
+class test:
+    def sound_check(self, animal):
+        animal.sound()
+
+d = dog()
+c = cat()
+
+
+t = test()
+t.sound_check(d)
+
+#--------------------------------------
+
+Output:
+Dog barks!
+
+
+
+
+
+
+
+
