@@ -1,0 +1,67 @@
+'''
+Abstraction is the process of hiding implementation details and showing only essential functionalities to the user.
+-----------------------------------------------------------------------------
+In simple words: You know what to do, but you don't need to know how it is done internally.
+------------------------------------------------------------------------------
+
+#Abstract Class: A abstract class is a class that acts like a blueprint for other classes.
+It contains one or more abstract methods.
+
+#Abstract Method:  An abstract method is a method declared in an abstract class without implementation and it must be implemented by child classes.
+'''
+
+#eg.1 ----------------------------------------------------------------
+
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+
+class Car(Vehicle):
+
+    def start(self):
+        print("Car starts using key")
+
+
+class Bike(Vehicle):
+
+    def start(self):
+        print("Bike starts using self-start button")
+
+
+c = Car()
+c.start()
+
+b = Bike()
+b.start()
+
+#eg.2 --------------------------------------------------------------------
+
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self, amount):
+        pass
+
+class CreditCard(Payment):
+
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using Credit Card")
+
+class UPI(Payment):
+
+    def pay(self, amount):
+        print(f"Paid ₹{amount} using UPI")
+
+
+c = CreditCard()  #abstract method implemented using child class 'CreditCard'
+c.pay(1000)
+
+u = UPI()   #abstract method implemented using child class 'UPI'
+u.pay(2000)
