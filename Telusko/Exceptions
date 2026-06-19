@@ -1,0 +1,26 @@
+#PythonExceptions:
+#An exception is an unexpected event that occurs during program execution.
+
+
+'''
+- The try block lets you test a block of code for errors.
+- The except block lets you handle the error. (A single try block can have multiple except blocks.)
+- The else block lets you execute code when there is no error.
+- The finally block lets you execute code, regardless of the result of the try- and except blocks.
+'''
+
+# eg.
+
+try:
+    a = int(input('Enter 1st number: '))
+    b = int(input('Enter 2nd number: '))
+
+    c = a/b
+
+    print(f'{a} divide by {b} is {c}')
+except ZeroDivisionError as zde:
+    print('Cannot divide a number by zero, please enter another number. ', zde)
+except ValueError as ve:
+    print('Invalid input, enter a number. ', ve)
+finally:
+    print('Thank you!')
