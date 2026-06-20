@@ -1,0 +1,34 @@
+'''
+Multithreading in Python allows multiple threads (smaller units of a process) to run concurrently, enabling efficient multitasking. 
+
+Process:
+- A process is an instance of a program that is executed on a computer. 
+- It has its own memory space and runs independently of other processes.
+
+Thread:
+- A thread is the smallest unit of execution inside a process.
+- A process can have multiple threads.
+- Think of a thread as a lightweight subprocess.
+'''
+
+eg.
+
+from threading import Thread
+
+def square(num):
+    print(f"Square: {num*num}")
+
+def cube(num):
+    print(f"Cube: {num*num*num}")
+   
+t1 = Thread(target=square, args=(4,))
+t2 = Thread(target=cube, args=(4,))
+
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+
+print("Done!")
+
+#Note: Since both threads (t1 and t2) run concurrently, the order of execution is not fixed. 
