@@ -1,0 +1,30 @@
+'''
+Multiprocessing in Python allows you to execute multiple processes simultaneously, utilizing multiple CPU cores for improved performance. 
+The multiprocessing module provides tools to create and manage separate processes that can run concurrently.
+'''
+
+eg.
+
+from multiprocessing import Process
+
+def cube(numbers):
+    for x in numbers:
+        print(f'{x} cube is: {x**3}')
+
+def evenno(numbers):
+    for x in numbers:
+        if x % 2 == 0:
+            print(f'{x} is an even number')
+
+if __name__ == '__main__':
+    my_numbers = [3, 4, 5, 6, 7, 8]
+    p1 = Process(target=cube, args=(my_numbers,))
+    p2 = Process(target=evenno, args=(my_numbers,))
+    
+    p1.start()
+    p2.start()
+    
+    process1.join()
+    process2.join()
+
+    print("Done")
