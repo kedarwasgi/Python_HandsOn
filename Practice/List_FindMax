@@ -1,0 +1,13 @@
+#1. Find the max number from a list.
+
+lst = [5, 8, 12, 20, 10, 27]
+
+max_num = lst[0] #assume the first element is max
+
+for i in lst:
+    if i > max_num:
+        max_num = i  #re-assigning max based on comparison 
+
+print(max_num)
+------------------------------------------------------------------
+
