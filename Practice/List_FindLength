@@ -1,0 +1,19 @@
+#2. Find Length of a list
+
+lst = [11, 5, 8, 12, 20, 10, 27]
+
+#Using built-in method
+print(len(lst))
+
+------------------------------------------
+
+#Without using built-in method
+
+length = 0 #Counter variable
+
+for i in lst:
+    length+=1
+
+print(length)
+
+------------------------------------------
