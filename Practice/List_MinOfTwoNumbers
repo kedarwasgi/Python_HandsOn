@@ -1,0 +1,23 @@
+#MinOfTwoNumbers
+
+input:
+a = 15
+b = 21
+
+------------------------------
+#Using built-in method min()
+print(min(a, b))
+
+------------------------------
+#Using If-Else
+
+if a < b:
+    print(a)
+else:
+    print(b)
+
+-------------------------------
+#Using Ternary Operator
+
+res = a if a < b else b
+print(res)
