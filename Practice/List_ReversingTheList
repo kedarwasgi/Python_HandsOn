@@ -1,0 +1,11 @@
+#ReversingTheList
+
+#Using a built-in method .reverse()
+a = [1, 2, 3, 4, 5]
+a.reverse()  #modifies the original list
+print(a)
+
+#Using List Slicing
+a = [1, 2, 3, 4, 5]
+rev = a[::-1]  #creates a new list with reversed elements
+print(rev)
