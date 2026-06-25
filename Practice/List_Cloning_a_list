@@ -1,0 +1,35 @@
+#Cloning a list
+
+#Using copy():
+copy() method is a built-in method in Python that creates a shallow copy of a list. 
+This method is simple and highly efficient for cloning a list.
+
+a = [1, 2, 3, 4, 5]
+b = a.copy()
+print(b)
+
+----------------------------------------------------
+#Using list():
+This method uses Python’s list() constructor to generate a copy of the original list.
+
+a = [1, 2, 3, 4, 5]
+b = list(a)
+print(b)
+
+---------------------------------------------------------------
+#Using List Comprehension:
+A list comprehension can also be used to copy the elements of a list into a new list.
+
+a = [1, 2, 3, 4, 5]
+b = [item for item in a]
+print(b)
+
+--------------------------------------------------------
+#Using copy.deepcopy() for Nested Lists:
+For nested lists, a deep copy is required to ensure that changes to the cloned list do not affect the original. 
+The copy module provides the deepcopy() method for this purpose.
+
+import copy
+a = [[1, 2], [3, 4], [5, 6]]
+b = copy.deepcopy(a)
+print(b)
