@@ -1,0 +1,23 @@
+#Count Occurrences 
+
+#Using count()
+The count() method is built-in and directly returns the number of times an element appears in the list.
+
+a = [1, 3, 2, 6, 3, 2, 8, 2, 9, 2, 7, 3]
+print(a.count(3))
+
+Output: 3
+
+---------------------------------------
+
+#Using a Loop
+
+a = [1, 3, 2, 6, 3, 2, 8, 2, 9, 2, 7, 3]
+
+count = 0
+for val in a:
+    if val == 3:
+        count += 1
+print(count)
+
+Output: 3
