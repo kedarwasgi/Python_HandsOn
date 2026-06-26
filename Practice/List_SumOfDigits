@@ -1,0 +1,30 @@
+#Sum of digits
+
+#Using List Comprehension
+
+a = [123, 456, 789]
+res = [sum(int(digit) for digit in str(val)) for val in a]
+print(res)
+
+------------------------------------------------------------------
+#Using map() with lambda Function
+
+a = [123, 456, 789]
+res = list(map(lambda val: sum(int(digit) for digit in str(val)), a))
+print(res)
+
+
+-----------------------------------------------------------------
+#Using Loops
+
+a = [123, 456, 789]
+res = []
+​
+for val in a:
+    total = 0
+    while val > 0:
+        total += val % 10
+        val //= 10
+    res.append(total)
+​
+print(res)
