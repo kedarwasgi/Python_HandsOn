@@ -21,3 +21,32 @@ else:
 
 res = a if a < b else b
 print(res)
+
+----------------------------------
+
+#Using min()
+
+a = [8, 3, 5, 1, 9, 12]
+res = min(a)
+print(res)
+
+-----------------------------------
+
+Using Sorting
+
+a = [8, 3, 5, 1, 9, 12]
+a.sort()
+res = a[0]
+print(res)
+
+---------------------------------------
+
+Using for Loop
+
+a = [8, 3, 5, 1, 9, 12]
+res = a[0]
+for val in a:
+    if val < res:
+        res = val
+​
+print(res)
