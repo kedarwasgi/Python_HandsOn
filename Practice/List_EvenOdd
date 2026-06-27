@@ -1,0 +1,55 @@
+#Even/Odd
+
+#1. Even:
+
+#Using List comprehension
+List comprehensions is an efficient way to filter elements from a list. 
+They are generally considered more Pythonic and faster than traditional loops.
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+res = [val for val in a if val % 2 == 0]
+print(res)
+
+#Using filter()
+filter() function provides a functional programming approach to filter elements from a list. 
+It can be a bit less intuitive compared to list comprehensions, but it is still very useful.
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+res = list(filter(lambda val: val % 2 == 0, a))
+print(res)
+
+#Using loop
+
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for val in a:
+    if val % 2 == 0:
+        print(val, end=" ")
+
+————————————————————————————————————————
+
+#2. Odd:
+
+#Using List Comprehension
+
+a = [10, 15, 23, 42, 37, 51, 62, 5]
+
+res = [i for i in a if i % 2 != 0]
+print(res)
+
+#Using filter() Function
+
+a = [10, 15, 23, 42, 37, 51, 62, 5]
+
+res = filter(lambda x: x % 2 != 0, a)
+print(list(res)
+
+#Using Loop
+
+a = [10, 15, 23, 42, 37, 51, 62, 5]
+
+for i in a:
+    if i % 2 != 0:
+        print(i)
