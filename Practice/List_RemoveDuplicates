@@ -1,0 +1,21 @@
+#How do you remove duplicates from a list while preserving order?
+
+Converting to a set removes duplicates but loses order. 
+To preserve order, use dict.fromkeys() (Python3.7+) or a seen-set approach.
+
+nums = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+
+# Method 1: dict.fromkeys (preserves order, Python 3.7+)
+
+unique = list(dict.fromkeys(nums))
+print(unique) # [3, 1, 4, 5, 9, 2, 6]
+
+# Method 2: seen set (also preserves order)
+
+seen = set()
+unique2 = [x for x in nums if not (x in seen or seen.add(x))]
+print(unique2) # [3, 1, 4, 5, 9, 2, 6]
+
+# Note: set(nums) removes duplicates but ORDER is NOT preserved
+print(list(set(nums))) # order may differ
+
