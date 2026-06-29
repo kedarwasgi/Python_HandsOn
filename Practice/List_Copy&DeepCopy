@@ -1,0 +1,16 @@
+#What is the difference between copy() and deep copy for lists?
+
+copy() (or list[:]) makes a SHALLOW copy — nested objects still share the same reference. 
+deepcopy() from the copy module creates fully independent nested objects.
+
+import copy
+original = [[1, 2], [3, 4]]
+
+shallow = original.copy() # or original[:]
+deep = copy.deepcopy(original)
+
+original[0][0] = 99 # modify nested list
+
+print(original) # [[99, 2], [3, 4]]
+print(shallow) # [[99, 2], [3, 4]] <- CHANGED (same ref)
+print(deep) # [[1, 2], [3, 4]] <- unchanged
