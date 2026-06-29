@@ -1,0 +1,28 @@
+#How do you flatten a nested list in Python?
+
+For one-level nesting, use a list comprehension. For arbitrary depth, use recursion or
+itertools.chain.from_iterable().
+
+import itertools
+nested = [[1,2,3], [4,5], [6,7,8,9]]
+
+# Method 1: list comprehension (one level deep)
+flat = [item for sublist in nested for item in sublist]
+print(flat) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Method 2: itertools.chain
+flat2 = list(itertools.chain.from_iterable(nested))
+print(flat2) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Deep flatten using recursion
+
+def deep_flatten(lst):
+    result = []
+    for item in lst:
+        if isinstance(item, list): 
+            result.extend(deep_flatten(item))
+        else: 
+            result.append(item)
+    return result
+
+print(deep_flatten([1,[2,[3,[4]]],5])) # [1,2,3,4,5]
