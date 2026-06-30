@@ -1,0 +1,31 @@
+# union, intersection, difference, and symmetric difference
+
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+------------------------------
+#union
+print(A | B)
+print(A.union(B)) # same
+
+# o/p : {1,2,3,4,5,6,7,8}
+--------------------------------
+#intersection
+
+print(A & B) 
+print(A.intersection(B))
+
+# o/p : {4, 5}
+----------------------------------
+#difference
+
+print(A - B)
+print(A.difference(B))
+
+# o/p : (in A not B): {1,2,3}
+-----------------------------------
+#symmetric diff
+
+print(A ^ B) #  (in A or B, not bot)
+print(A.symmetric_difference(B))
+
+# o/p :  {1,2,3,6,7,8}
