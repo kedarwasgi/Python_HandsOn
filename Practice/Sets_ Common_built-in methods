@@ -1,0 +1,23 @@
+#Most Common Built-in Methods
+
+# add, remove, discard, pop, clear
+
+fruits = {'apple', 'banana', 'cherry'}
+
+#add
+fruits.add('date') # add element
+print(fruits) # {'apple','banana','cherry','date'}
+
+#remove
+fruits.remove('banana') # remove — raises KeyError if absent
+
+#discard
+fruits.discard('mango') # discard — NO error if absent
+
+#pop
+popped = fruits.pop() # remove & return arbitrary element
+print(popped) # some element
+
+#clear
+fruits.clear() # remove all elements
+print(fruits) # set()
