@@ -1,0 +1,24 @@
+#Tuple Packing and Unpacking
+
+#Packing
+coords = 10, 20, 30 # packs into tuple
+print(coords) # (10, 20, 30)
+
+# Unpacking — variables must match length
+x, y, z = coords
+print(x, y, z) # 10 20 30
+
+#Swap variables using tuple unpacking
+a, b = 5, 10
+a, b = b, a
+print(a, b) # 10 5
+
+# Extended unpacking (*)
+
+first, *rest = (1, 2, 3, 4, 5)
+print(first) # 1
+print(rest) # [2, 3, 4, 5] (rest becomes a list!)
+
+*start, last = (1, 2, 3, 4, 5)
+print(start) # [1, 2, 3, 4]
+print(last) # 5
